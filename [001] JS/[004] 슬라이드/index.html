@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer></script>
+    <title>Document</title>
+    <style>
+        .container { position: relative ; width: 100%; height: 50vh; overflow: hidden; box-sizing: border-box; border:1px solid blue; margin: 0; padding: 0;}
+        .slider-container { position: absolute; width: 100%; height:100%; box-sizing: border-box;  margin: 0; padding: 0;}
+        .slider-container.animated { -webkit-transition:left .3s ease-in; transition: left .3s ease-in; margin: 0;}
+        .slide { position: absolute; width: 100%; padding: 0 10%; box-sizing: border-box; top: 50%; transform: translateY(-50%); text-align: center; overflow: hidden; margin: 0;}
+
+        /* nav */
+        #prev,#next { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 99999; display: inline-block; height: 5em; width: 5em; border-radius: 50%; background-position: center; background-repeat: no-repeat; -webkit-transition: all .3s ease-in; transition: all .3s ease-in; background-color:skyblue}
+        #prev.disabled , #next.disabled { display: none;}
+        #prev { margin-left: -500px;}
+        #next { margin-left: 500px; background-color: red;}
+        button { cursor: pointer;}
+
+
+    </style>
+</head>
+<body>
+        <div class="container">
+            <ul class="slider-container simple-list" id="slider">
+                
+                <li class="slide" style="height:500px">0<br>ddd</li>
+                <li class="slide">1<br></li>
+                <li class="slide">2</li>
+                <li class="slide">3</li>
+                <li class="slide">4</li>
+                <li class="slide">5</li>
+            </ul>
+            <a href="" id="prev"></a>
+            <a href="" id="next"></a>
+        </div>
+
+
+    
+</body>
+</html>
