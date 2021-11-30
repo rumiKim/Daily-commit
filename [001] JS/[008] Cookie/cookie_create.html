@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿠키 생성하기</title>
+
+    <script>
+        let date = new Date(); // 현재 날짜 반환
+        //현재 날짜로부터 7일 후  ==> date.getDate() + 7; 
+        //날짜지정 ==> date.setDate(새로운 날짜.)
+
+        date.setDate(date.getDate() + 7); //오늘로부터 7일 후로 날짜 지정.
+
+        // console.log(date);
+
+        let setCookie = ''; 
+        setCookie += 'CookieName = ABC; ';
+        setCookie += 'expires = ' + date.toUTCString( );
+
+        console.log(setCookie);
+
+        document.cookie = setCookie;
+    </script>
+</head>
+<body>
+
+    <!--
+        
+        ** 쿠키 생성을 위해 필요한 것 
+        1. 쿠키이름 
+
+        2. 소멸시기(expires )
+
+
+
+     -->
+    
+</body>
+</html>
