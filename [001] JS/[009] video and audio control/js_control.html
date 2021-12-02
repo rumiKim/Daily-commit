@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="robots" content="index, follow">
+<title></title>	
+<link rel="stylesheet" href="css/main.css">
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+
+</head>
+<body>
+
+<button id="btn_aplay" onclick="playAudio()">Play music</button>
+<button id="btn_apause" onclick="pauseAudio()">Pause music</button><br>
+<hr>
+<button id="btn_vplay">play video</button>
+<button id="btn_vpause">pause video</button>
+
+
+<video src="video/vivaldi.mp4" autoplay muted></video>  
+<audio src="audio/Honey_Bee_01_web.mp3" id="myaudio"></audio>
+
+
+
+<script>
+    'use strict';
+    const myAudio = document.getElementById('myaudio');
+
+    // 오디오 재생
+    function playAudio(){
+        myAudio.play();
+    }
+
+    // 오디오 일시정지
+    function pauseAudio(){
+        myAudio.pause();
+    }
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
