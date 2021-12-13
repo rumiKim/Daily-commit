@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Mobile Detect</h1>
+
+<div class="mobile">mobile device</div>
+<div class="pc">PC device</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    'use strict';
+    ///방법 1 : devicePixelRatio ==================================
+    // let ratio = window.devicePixelRatio;
+    // // ratio 가 2 이상이라면 모바일 기기로 들어온 것. 
+    // if(ratio >= 2){
+    //     document.querySelector('.pc').style.display = 'none';
+    // }else{
+    //     document.querySelector('.mobile').style.display = 'none';
+    // }
+
+
+    ///방법 2 : Modernizr ==================================
+    // if (Modernizr.touchevents) {
+    // // supported
+    //   document.querySelector('.pc').style.display = 'none';
+    // } else {
+    // // not-supported
+    //  document.querySelector('.mobile').style.display = 'none';
+    // }
+
+    ///방법 3 : userAgent 활용 ==================================
+    // let uAgent = navigator.userAgent;
+    // console.log(uAgent);
+
+    ///방법 4 : 라이브러리 활용 (Detect Mobile Browsers) ==================================
+
+
+
+
+</script>
+<script></script>
+
+</body>
+</html>
