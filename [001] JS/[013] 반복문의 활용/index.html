@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="menu1">
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+    </ul>
+    <ul class="menu2">
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+    </ul>
+    <ul class="menu3">
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+    </ul>
+    <ul class="menu4">
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+    </ul>
+    <ul class="menu5">
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+    </ul>
+    <ul class="menu6">
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+    </ul>
+    <ul class="menu7">
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+        <li>메뉴입니다</li>
+    </ul>
+    
+
+    <script>
+
+        'use strict';
+        const $menu1 = document.querySelectorAll('.menu1 li');
+        const $menu2 = document.querySelectorAll('.menu2 li');
+        const $menu3 = document.querySelectorAll('.menu3 li');
+        const $menu4 = document.querySelectorAll('.menu4 li');
+
+
+        // 반복문을 활용하여 리스트의 색상을 blue로 변경
+
+        // for
+        for(let i=0; i<$menu1.length; i++){
+            $menu1[i].style.color = 'blue';
+
+            $menu1[i].addEventListener('mouseover',function(){
+                this.style.background = 'pink'
+            });
+            $menu1[i].addEventListener('mouseout',function(){
+                this.style.background = 'none'
+            });
+
+        }
+
+        // foreach
+        $menu2.forEach(function(item,index){
+            // $menu2[index].style.color = 'blue';
+            item.style.color = 'blue';
+
+            item.addEventListener('mouseover',function(){
+                this.style.background = 'yellow'
+            });
+            item.addEventListener('mouseout',function(){
+                this.style.background = 'none'
+            });
+
+        })
+
+        // for of ( 객체는 for in, 배열은 for of )
+
+        let list ; 
+        for(list of $menu3){
+            list.style.color = 'blue';
+
+            list.addEventListener('mouseover',function(){
+                this.style.background = 'green'
+            });
+            list.addEventListener('mouseout',function(){
+                this.style.background = 'none'
+            });
+        }
+
+        // do while
+
+        let y = 0;
+        do {
+            $menu4[y].style.color = 'red';
+            
+            $menu4[y].addEventListener('mouseover',function(){
+                this.style.background = 'green'
+            });
+            $menu4[y].addEventListener('mouseout',function(){
+                this.style.background = 'none'
+            });
+
+            y++ // 맨 뒤에 작성해야함. addEventListener 앞에 작성해버리면 index 0 번은 addEventListener 가 걸리지 않기 때문에 
+            
+
+        }while(y < $menu4.length)
+
+
+
+
+
+    </script>
+</body>
+</html>
