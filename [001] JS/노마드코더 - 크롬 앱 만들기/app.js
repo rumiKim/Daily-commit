@@ -55,3 +55,105 @@ console.log(player.name);
 player.age = 27;
 
 console.log(player);
+
+
+
+function sayHello(nameOfperson, age){
+
+    console.log(nameOfperson, age)
+    console.log("Hello my name is " + nameOfperson + " and I'm " + age)
+    
+}
+
+sayHello("ahreum", 27)
+sayHello("jin", 31)
+sayHello("JK" ,26)
+
+
+console.log('----------------------------------------------------')
+function plus(a,b){
+    console.log(a + b);
+}
+
+plus();
+
+// Nan ==> Not a Number
+
+
+const user = { 
+    name : 'ahreum',
+    sayHello :function(otherPersonsName){
+        console.log('hello! ' + otherPersonsName + ' Nice to meet you');
+    },
+};
+
+console.log(user.name);
+
+// object update
+user.name = 'rumi';
+console.log(user.name);
+
+// object add property
+user.age = 27;
+console.log(user);
+
+
+const calc = {
+    plus : function(a,b){
+        return a + b ;
+        console.log(a+b+'는 결과값이다')
+    },
+    minus : function(a,b){
+        return a - b ;
+    },
+    multi : function(a,b){
+        return a * b ;
+    },
+    divide : function(a,b){
+        return a / b ;
+    },
+    power : function(a,b){
+        return a ** b ;
+    }
+    
+}
+
+const plusResult = calc.plus(5,10);
+const minusResult = calc.minus(plusResult,10 );
+console.log(plusResult);
+
+console.log(plusResult, minusResult);
+calc.minus(20,8);
+calc.multi(7,8);
+calc.divide(100,10);
+calc.power(5,3);
+
+
+const age = 27;
+function calcKrAge(ageOfForeign){
+    return ageOfForeign + 2;
+}
+const krAge = calcKrAge(30);
+console.log(krAge);
+
+
+const yourAge = parseInt(prompt('How old are you?'));
+
+if(isNaN(yourAge)){
+    alert('please write a number');
+}else if (yourAge < 18){
+    console.log('you are too young.')
+}else if (yourAge >= 18 && yourAge <= 50){
+    console.log('you can drink');
+    
+}else if (yourAge > 50 && yourAge <= 80){
+    console.log('you should exercise');
+}else{
+    console.log("you can't drink")
+}
+
+
+
+
+
+
