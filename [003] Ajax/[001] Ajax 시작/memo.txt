@@ -1,2 +1,0 @@
-🟠 ajax 
-Asynschronous Javascript And XML.
