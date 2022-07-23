@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    body { padding: 0; margin: 0;}
+    body * { box-sizing: border-box;}
+    .wrap { position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); padding:70px; width:500px; height:500px; border: 2px solid blue; background-color:aquamarine;}
+    .outer { padding:50px; width: 100%; height: 100%; border: 3px solid red; box-sizing: border-box; background: pink;}
+    .inner { overflow: scroll; width: 100%; height: 100%; background: antiquewhite; border: 3px solid coral;}
+    .box_scroll { height:800px; }
+
+</style>
+<body>
+<div class="wrap">
+    <div class="outer">
+        <div class="inner">
+            <div class="box_scroll">스크롤 박스</div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        'use strict';
+        const wrap = document.querySelector('.wrap');
+        const outer = document.querySelector('.outer');
+        const inner = document.querySelector('.inner');
+        const scrollBox = document.querySelector('.box_scroll');
+
+        // console.log('offsetParent : .outer의 가장 가까이에 있는 조상 = ' + outer.offsetParent) 
+        // console.log('offsetWidth(border포함) = ' + outer.offsetWidth) 
+        // console.log('offsetHeight(border포함) = ' + outer.offsetHeight) 
+        // console.log('clientWidth(border미포함) : ' + outer.clientWidth)
+        // console.log('clientHeight(border미포함) : ' + outer.clientHeight)
+        // console.log(outer.offsetParent)
+        // console.log('outer의 offsetParent로부터의 X축 거리 : ' +  outer.offsetLeft)
+        console.log('* wrap *')
+        console.log(wrap.offsetWidth);
+        console.log(wrap.clientWidth);
+        console.log(wrap.offsetParent);
+
+        console.log('')
+        console.log('* outer *')
+        console.log(outer.offsetWidth);
+        console.log(outer.clientWidth);
+        console.log(outer.offsetParent);
+        console.log('')
+
+        console.log('* inner *')
+        console.log(inner.offsetHeight + ' offsetHeight => scrollbar + border 합친 크기');
+        console.log(inner.clientHeight + ' clientHeight => scrollbar + border 제외한 크기');
+        console.log(inner.scrollHeight + ' scrollHeight => hidden된 스크롤 영역까지 합친 전체 박스 크기');
+        console.log(inner.offsetParent);
+        console.log('')
+
+        console.log('* box_scroll *')
+        console.log(scrollBox.offsetHeight);
+        console.log(scrollBox.clientHeight);
+        console.log(scrollBox.offsetParent);
+
+
+    </script>
+</body>
+</html>
