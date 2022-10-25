@@ -1,0 +1,29 @@
+breaking change - 버전을 업데이트하면서 코드가 깨져서 코드를 수정해야하는 경우를 말함. 예전 방식을 지우고 직접 새 버전에 맞춰서 수정해줘야 한다. 
+
+
+Web-app의 장접 
+1. 모바일 앱으로 발행이 쉽다. 
+2. 앱처럼 뛰어난 UX
+2. 일반 웹사이트보다 비즈니스적 강점이 있다. ( 사용자에게 긍정적인 영향을 줌 )
+
+💹React 작업을 위한 사전 준비 PROCESS 및 필요한 부분 
+1. node.js 설치 - 구글에 사이트 검색해서 설치. (최신버전 설치 추천. 보통 에러 발생)
+  설치하는 이유 : npm등의 툴의 이용을 가능하게 해줘서  create-react-app 라이브러리를 사용하기 위해 사용
+
+2. IDE(Integrated Development Environment : 통합개발환경) - VSCODE 등
+
+3. terminal 에서 npx create-react-app [폴더명] 설치
+
+npx : 라이브러리 설치 명령어
+create-react-app : 리액트 셋팅 다된 boilerplate 만들기 쉽게 도와주는 라이브러리 
+
+💹React 프로젝트 폴더 구조 
+public : static파일 보관함 
+src : 실질적인 소스코드 보관함
+package.json : 내가 설치한 라이브러리 목록
+
+
+
+
+공부해야할 부분
+npm과 npx의 차이 
